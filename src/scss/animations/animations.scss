@@ -1,0 +1,67 @@
+//variables
+$duration: 0.75s;
+$transition-timing-function: ease-in-out;
+
+// ANIMATION 1: Fade in
+//------------------------------------------------------------------------------------
+.fade-in-up {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 0s forwards;
+  }
+}
+
+.fade-in-up-250 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 0.25s forwards;
+  }
+}
+
+.fade-in-up-500 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 0.5s forwards;
+  }
+}
+
+.fade-in-up-750 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 0.75s forwards;
+  }
+}
+
+.fade-in-up-1000 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 1s forwards;
+  }
+}
+
+.fade-in-up-1250 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 1.25s forwards;
+  }
+}
+
+.fade-in-up-1500 {
+  opacity: 0;
+  &.in-viewport{
+    animation: fadeInUp $duration $transition-timing-function 1.5s forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//------------------------------------------------------------------------------------
+
