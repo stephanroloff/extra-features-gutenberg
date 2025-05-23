@@ -9,9 +9,17 @@ const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
         const { name, attributes, setAttributes } = props;
 
         let parallaxOptions = [
-            {label:'None', value: 'none'},
-            {label:'Parallax, speed : 0', value: 'parallax'},
-            {label:'Parallax, speed : 250', value: 'parallax-250'},
+            { label: 'None', value: '' },
+            { label: '0.1', value: 'parallax-01' },
+            { label: '0.2', value: 'parallax-02' },
+            { label: '0.3', value: 'parallax-03' },
+            { label: '0.4', value: 'parallax-04' },
+            { label: '0.5', value: 'parallax-05' },
+            { label: '0.6', value: 'parallax-06' },
+            { label: '0.7', value: 'parallax-07' },
+            { label: '0.8', value: 'parallax-08' },
+            { label: '0.9', value: 'parallax-09' },
+            { label: '1.0', value: 'parallax-10' },
         ];
 
         if (name !== 'core/group' ) {
