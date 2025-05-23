@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Animations Gutenberg
+ * Plugin Name:       Extra features for gutenberg editor
  * Description:       This is a Plugin for animations in Gutenberg Editor.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -21,8 +21,8 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 
-define('MY_PLUGIN_PATH_ANIMATIONS_GUTENBERG',plugin_dir_url(__FILE__));
-define('MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG', plugin_dir_path(__FILE__));
+define('MY_PLUGIN_PATH_EXTRA_GUTENBERG',plugin_dir_url(__FILE__));
+define('MY_PLUGIN_DIR_EXTRA_GUTENBERG', plugin_dir_path(__FILE__));
 
-include MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG . 'inc/add-html-attributes.php';
-include MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG . 'inc/enqueue-assets.php';
+include MY_PLUGIN_DIR_EXTRA_GUTENBERG . 'inc/add-html-attributes.php';
+include MY_PLUGIN_DIR_EXTRA_GUTENBERG . 'inc/enqueue-assets.php';
