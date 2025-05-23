@@ -4,7 +4,7 @@
 
 //Paso 1
 //Create Attribute
-function addNewAnimationAttributePosition( settings, name ) {
+function addNewAttributeAnimation( settings, name ) {
     if (name === 'core/group') {
         settings.attributes = {
             ...settings.attributes,
@@ -19,6 +19,6 @@ function addNewAnimationAttributePosition( settings, name ) {
 
 wp.hooks.addFilter(
     'blocks.registerBlockType',
-    'position-gutenberg/add-new-animation-attribute',
-    addNewAnimationAttributePosition
+    'editor-gutenberg/add-attribute-animation',
+    addNewAttributeAnimation
 );

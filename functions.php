@@ -24,5 +24,5 @@
 define('MY_PLUGIN_PATH_ANIMATIONS_GUTENBERG',plugin_dir_url(__FILE__));
 define('MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG', plugin_dir_path(__FILE__));
 
-include MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG . 'inc/add-html-attributes-animations.php';
+include MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG . 'inc/add-html-attributes.php';
 include MY_PLUGIN_DIR_ANIMATIONS_GUTENBERG . 'inc/enqueue-assets.php';
