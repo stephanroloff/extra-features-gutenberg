@@ -1,1 +1,2 @@
-meter parallax en animations, ya que tienen conflicto con translateY, y ademas en estricto rigor parallax es una animacion
+- meter parallax en animations, ya que tienen conflicto con translateY, y ademas en estricto rigor parallax es una animacion
+- agregar direcciones hacia arriba, abajo, izquierda, derecha.

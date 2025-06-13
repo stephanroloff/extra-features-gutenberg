@@ -13,8 +13,8 @@ export default function elementSpeed(elementSelector, speed){
       
         // Agrega un evento de desplazamiento
         window.addEventListener('scroll', function() {
-          console.log('Posicion Original', posicionOriginal); //valor fijo
-          console.log('Tamano ventana', window.innerHeight); //valor fijo
+          // console.log('Posicion Original', posicionOriginal); //valor fijo
+          // console.log('Tamano ventana', window.innerHeight); //valor fijo
           // console.log('Posicion actual', window.scrollY);
           
           // Calcula la distancia entre la posición original y la posición actual
@@ -34,7 +34,7 @@ export default function elementSpeed(elementSelector, speed){
           let rate = distanciaDesdeOriginal * speed;
       
           // Mueve el elemento a una velocidad diferente
-          element.style.position = 'relative';
+          element.style.position = 'absolute';
           element.style.transform = `translate3d(0px, -${rate}px, 0px)`;
           // element.style.transform = `translate3d(0px, ${rate}px, 0px)`;
         //   element.style.transform = `translate3d(${rate}px, 0px, 0px)`; //nach rechts
