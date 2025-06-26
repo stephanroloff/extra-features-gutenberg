@@ -35,15 +35,33 @@ export default function elementSpeed(elementSelector, speed){
       
           // Mueve el elemento a una velocidad diferente
           element.style.position = 'absolute';
-          element.style.transform = `translate3d(0px, -${rate}px, 0px)`;
-          // element.style.transform = `translate3d(0px, ${rate}px, 0px)`;
-        //   element.style.transform = `translate3d(${rate}px, 0px, 0px)`; //nach rechts
-          // element.style.transform = `translate3d(-${rate}px, 0px, 0px)`; //nach links
-        //   element.style.transform = `rotate(${rate/40}deg)`; //nach rechts  40 es slowness
-        //   element.style.transform = `rotate(-${rate}deg)`; //nach links
+
+
+          if (element.classList.contains('parallax-left')) {
+            element.style.transform = `translate3d(-${rate}px, 0px, 0px)`;
+          } else if (element.classList.contains('parallax-right')) {
+            element.style.transform = `translate3d(${rate}px, 0px, 0px)`;
+          } else if (element.classList.contains('parallax-up')) {
+            element.style.transform = `translate3d(0px, -${rate}px, 0px)`;
+          } else if (element.classList.contains('parallax-down')) {
+            element.style.transform = `translate3d(0px, ${rate}px, 0px)`; 
+          } else if (element.classList.contains('rotate-left')) {
+            element.style.transform = `rotate(-${rate}deg)`; 
+          } else if (element.classList.contains('rotate-right')) {
+            element.style.transform = `rotate(${rate}deg)`; 
+          }
         });
     });
 }
+elementSpeed('.parallax-001', 0.01);  
+elementSpeed('.parallax-002', 0.02);  
+elementSpeed('.parallax-003', 0.03);  
+elementSpeed('.parallax-004', 0.04);  
+elementSpeed('.parallax-005', 0.05);  
+elementSpeed('.parallax-006', 0.06);  
+elementSpeed('.parallax-007', 0.07);  
+elementSpeed('.parallax-008', 0.08);  
+elementSpeed('.parallax-009', 0.09);  
 elementSpeed('.parallax-01', 0.1);  
 elementSpeed('.parallax-02', 0.2);  
 elementSpeed('.parallax-03', 0.3);  

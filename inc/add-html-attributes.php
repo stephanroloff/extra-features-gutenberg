@@ -52,9 +52,14 @@ function add_html_attr( $block_content, $block ) {
                 $processor->add_class( $block['attrs']['animation']);
             }
 
-            //Parallax
+            //Parallax Speed
             if(isset($block['attrs']['parallax'])){
                 $processor->add_class( $block['attrs']['parallax']);
+            }
+
+            //Parallax Direction
+            if(isset($block['attrs']['parallax_direction'])){
+                $processor->add_class( $block['attrs']['parallax_direction']);
             }
 
             // echo '<pre>';

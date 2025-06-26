@@ -12,6 +12,10 @@ function addNewAttributeParallax( settings, name ) {
                 type: 'string',
                 default: ''
             },
+            parallax_direction: {
+                type: 'string',
+                default: 'up'
+            }
         };
     }
     return settings;
