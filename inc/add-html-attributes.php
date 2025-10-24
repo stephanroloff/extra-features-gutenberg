@@ -19,6 +19,7 @@ function add_html_attr( $block_content, $block ) {
             if(isset($block['attrs']['position'])){
                 if($block['attrs']['position']=='relative' || $block['attrs']['position']=='absolute' || $block['attrs']['position']=='fixed'){
                     $position  = "position: " . $block['attrs']['position'] . "; width: 100%; ";
+                    // $position  = "position: " . $block['attrs']['position'] . "; width: auto; ";
                     $inlineStyle = $inlineStyle . $position;
                 }
             }
@@ -45,6 +46,10 @@ function add_html_attr( $block_content, $block ) {
             if(isset($block['attrs']['overflow'])){
                 $overflow  = "overflow: " . $block['attrs']['overflow'] . "; ";
                 $inlineStyle = $inlineStyle . $overflow;
+            }
+            if(isset($block['attrs']['height'])){
+                $height  = "height: " . $block['attrs']['height'] . "; ";
+                $inlineStyle = $inlineStyle . $height;
             }
 
             //Animations

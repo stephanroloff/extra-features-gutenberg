@@ -35,6 +35,10 @@ function addNewAttributesExtraFeatures( settings, name ) {
             overflow: {
                 type: 'string',
                 default: ''
+            },
+            height: {
+                type: 'string',
+                default: ''
             }
         };
     }

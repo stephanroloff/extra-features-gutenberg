@@ -61,6 +61,12 @@ const positioningControls = createHigherOrderComponent( ( BlockEdit ) => {
                     }else{
                         groupDiv.style.overflow = 'visible';
                     }
+
+                    if(attributes.height){
+                        groupDiv.style.height = attributes.height;
+                    }else{
+                        groupDiv.style.height = 'auto';
+                    }
                 }
             }
         }, [attributes])
@@ -100,7 +106,7 @@ const positioningControls = createHigherOrderComponent( ( BlockEdit ) => {
                                                 label="Top"
                                                 isUnitSelectTabbable
                                                 value={ attributes.top } 
-                                                />
+                                            />
                                         </div>
                                         <div style={{width: '100px', marginBottom: '10px'}}>
                                             <UnitControl
@@ -159,6 +165,13 @@ const positioningControls = createHigherOrderComponent( ( BlockEdit ) => {
                                 {label:'Scroll', value: 'scroll'},
                             ] }
                         />  
+                        <UnitControl
+                            onChange={ ( newValue ) => setAttributes( { height: newValue } ) } 
+                            // onUnitChange={ e => console.log("new unit") }
+                            label="Height"
+                            isUnitSelectTabbable
+                            value={ attributes.height } 
+                        />
 
                     </PanelBody>
                 </InspectorControls>
