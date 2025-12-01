@@ -10,33 +10,33 @@ const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
 
         let parallaxOptions = [
             { label: 'None', value: '' },
-            { label: '0.01', value: 'parallax-001' },
-            { label: '0.02', value: 'parallax-002' },
-            { label: '0.03', value: 'parallax-003' },
-            { label: '0.04', value: 'parallax-004' },
-            { label: '0.05', value: 'parallax-005' },
-            { label: '0.06', value: 'parallax-006' },
-            { label: '0.07', value: 'parallax-007' },
-            { label: '0.08', value: 'parallax-008' },
-            { label: '0.09', value: 'parallax-009' },
-            { label: '0.1', value: 'parallax-01' },
-            { label: '0.2', value: 'parallax-02' },
-            { label: '0.3', value: 'parallax-03' },
-            { label: '0.4', value: 'parallax-04' },
-            { label: '0.5', value: 'parallax-05' },
-            { label: '0.6', value: 'parallax-06' },
-            { label: '0.7', value: 'parallax-07' },
-            { label: '0.8', value: 'parallax-08' },
-            { label: '0.9', value: 'parallax-09' },
-            { label: '1.0', value: 'parallax-10' },
+            { label: '0.01', value: '0.01' },
+            { label: '0.02', value: '0.02' },
+            { label: '0.03', value: '0.03' },
+            { label: '0.04', value: '0.04' },
+            { label: '0.05', value: '0.05' },
+            { label: '0.06', value: '0.06' },
+            { label: '0.07', value: '0.07' },
+            { label: '0.08', value: '0.08' },
+            { label: '0.09', value: '0.09' },
+            { label: '0.1', value: '0.1' },
+            { label: '0.2', value: '0.2' },
+            { label: '0.3', value: '0.3' },
+            { label: '0.4', value: '0.4' },
+            { label: '0.5', value: '0.5' },
+            { label: '0.6', value: '0.6' },
+            { label: '0.7', value: '0.7' },
+            { label: '0.8', value: '0.8' },
+            { label: '0.9', value: '0.9' },
+            { label: '1.0', value: '1.0' },
         ];
 
         let directionOptions = [
             { label: 'None', value: '' },
-            { label: 'Up', value: 'parallax-up' },
-            { label: 'Down', value: 'parallax-down' },
-            { label: 'Right', value: 'parallax-right' },
-            { label: 'Left', value: 'parallax-left' },
+            { label: 'Up', value: 'up' },
+            { label: 'Down', value: 'down' },
+            { label: 'Right', value: 'right' },
+            { label: 'Left', value: 'left' },
             { label: 'Rotate Right', value: 'rotate-right' },
             { label: 'Rotate Left', value: 'rotate-left' },
         ];
@@ -53,8 +53,8 @@ const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
                         <SelectControl
                             __nextHasNoMarginBottom
                             label="Parallax Speed"
-                            value={ attributes.parallax } 
-                            onChange={ ( newValue ) => setAttributes( { parallax: newValue } ) } 
+                            value={ attributes.parallax_speed } 
+                            onChange={ ( newValue ) => setAttributes( { parallax_speed: newValue } ) } 
                             options={parallaxOptions}
                         />
                         <SelectControl

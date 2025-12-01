@@ -8,13 +8,13 @@ function addNewAttributeParallax( settings, name ) {
     if (name === 'core/group') {
         settings.attributes = {
             ...settings.attributes,
-            parallax: {
+            parallax_speed: {
                 type: 'string',
                 default: ''
             },
             parallax_direction: {
                 type: 'string',
-                default: 'up'
+                default: ''
             }
         };
     }

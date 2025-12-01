@@ -57,14 +57,19 @@ function add_html_attr( $block_content, $block ) {
                 $processor->add_class( $block['attrs']['animation']);
             }
 
-            //Parallax Speed
-            if(isset($block['attrs']['parallax'])){
-                $processor->add_class( $block['attrs']['parallax']);
+            //Animations
+            if(isset($block['attrs']['parallax_direction'])){
+                $processor->add_class( 'parallax');
             }
 
             //Parallax Direction
             if(isset($block['attrs']['parallax_direction'])){
-                $processor->add_class( $block['attrs']['parallax_direction']);
+                $processor->set_attribute( 'data-parallax-direction', $block['attrs']['parallax_direction'] );
+            }
+
+            //Parallax Speed
+            if(!empty($block['attrs']['parallax_speed'])){
+                $processor->set_attribute( 'data-parallax-speed', $block['attrs']['parallax_speed'] );
             }
 
             // echo '<pre>';
