@@ -45,11 +45,9 @@ window.addEventListener('load', () => {
                             el.element.style.transform = `translateX(${distanceFromOriginal * -el.speed}px)`;
                             break;
                         case 'rotate-right':
-                            el.element.style.transformOrigin = 'center center';
                             el.element.style.transform = `rotate(${distanceFromOriginal * el.speed}deg)`;
                             break;
                         case 'rotate-left':
-                            el.element.style.transformOrigin = 'center center';
                             el.element.style.transform = `rotate(${distanceFromOriginal * -el.speed}deg)`;
                             break;
                     }
