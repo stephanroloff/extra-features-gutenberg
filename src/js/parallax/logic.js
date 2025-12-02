@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
     elements.forEach(el => {
         let speed = el.dataset.parallaxSpeed;
         let direction = el.dataset.parallaxDirection;
+        let distance = el.dataset.parallaxDistance;
         
         const rect = el.getBoundingClientRect();
         let originalPosition = rect.top + window.scrollY;
@@ -14,7 +15,8 @@ window.addEventListener('load', () => {
             element: el,
             speed: parseFloat(speed),
             direction: direction || 'up',
-            originalPosition: originalPosition
+            originalPosition: originalPosition,
+            distance: distance || 0
         });
     });
 
@@ -27,9 +29,30 @@ window.addEventListener('load', () => {
                 const windowHeight = window.innerHeight;   
 
                 parallaxElementsData.forEach(el => {
-                    let distanceFromOriginal = scrollY - el.originalPosition + windowHeight - 1800;
-                    console.log('distanceFromOriginal:', distanceFromOriginal);
-                    el.element.style.transform = `translateY(${distanceFromOriginal * -el.speed}px)`;
+                    let distanceFromOriginal = scrollY - el.originalPosition + windowHeight - el.distance;
+
+                    switch (el.direction) {
+                        case 'up':
+                            el.element.style.transform = `translateY(${distanceFromOriginal * -el.speed}px)`;
+                            break;
+                        case 'down':
+                            el.element.style.transform = `translateY(${distanceFromOriginal * el.speed}px)`;
+                            break;
+                        case 'right':
+                            el.element.style.transform = `translateX(${distanceFromOriginal * el.speed}px)`;
+                            break;
+                        case 'left':
+                            el.element.style.transform = `translateX(${distanceFromOriginal * -el.speed}px)`;
+                            break;
+                        case 'rotate-right':
+                            el.element.style.transformOrigin = 'center center';
+                            el.element.style.transform = `rotate(${distanceFromOriginal * el.speed}deg)`;
+                            break;
+                        case 'rotate-left':
+                            el.element.style.transformOrigin = 'center center';
+                            el.element.style.transform = `rotate(${distanceFromOriginal * -el.speed}deg)`;
+                            break;
+                    }
                 });
         
                 ticking = false;

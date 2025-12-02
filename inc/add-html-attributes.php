@@ -72,6 +72,11 @@ function add_html_attr( $block_content, $block ) {
                 $processor->set_attribute( 'data-parallax-speed', $block['attrs']['parallax_speed'] );
             }
 
+            //Parallax Speed
+            if(!empty($block['attrs']['parallax_distance'])){
+                $processor->set_attribute( 'data-parallax-distance', $block['attrs']['parallax_distance'] );
+            }
+
             // echo '<pre>';
             // var_dump($inlineStyle);
             // echo '</pre>';

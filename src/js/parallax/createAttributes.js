@@ -15,6 +15,10 @@ function addNewAttributeParallax( settings, name ) {
             parallax_direction: {
                 type: 'string',
                 default: ''
+            },
+            parallax_distance: {
+                type: 'string',
+                default: '0'
             }
         };
     }

@@ -3,6 +3,7 @@
 const { createHigherOrderComponent } = wp.compose;
 const { InspectorControls } = wp.blockEditor;
 const { PanelBody, SelectControl } = wp.components;
+import { __experimentalNumberControl as NumberControl } from '@wordpress/components';
 
 const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
     return ( props ) => {
@@ -52,6 +53,7 @@ const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
                     <PanelBody title="Parallax" initialOpen={ false }>
                         <SelectControl
                             __nextHasNoMarginBottom
+                            __next40pxDefaultSize
                             label="Parallax Speed"
                             value={ attributes.parallax_speed } 
                             onChange={ ( newValue ) => setAttributes( { parallax_speed: newValue } ) } 
@@ -59,10 +61,22 @@ const parallaxControls = createHigherOrderComponent( ( BlockEdit ) => {
                         />
                         <SelectControl
                             __nextHasNoMarginBottom
+                            __next40pxDefaultSize
                             label="Parallax Direction"
                             value={ attributes.parallax_direction } 
                             onChange={ ( newValue ) => setAttributes( { parallax_direction: newValue } ) } 
                             options={directionOptions}
+                        />
+                        <NumberControl
+                            __nextHasNoMarginBottom
+                            __next40pxDefaultSize
+                            label="Parallax Distance"
+                            isShiftStepEnabled={ true }
+                            shiftStep={ 10 }
+                            value={ attributes.parallax_distance } 
+                            onChange={ ( newValue ) => setAttributes( { parallax_distance: newValue } ) } 
+                            min={-1000000}
+                            max={1000000}
                         />
                     </PanelBody>
                 </InspectorControls>
