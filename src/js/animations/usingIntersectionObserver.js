@@ -22,7 +22,7 @@ allAnimationsClassNames.forEach(className => {
         if (selectedElement) {
             isElementInBrowser({
                 element: selectedElement, 
-                rootMargin: '-10%',        
+                rootMargin: '-100px 0px',        
                 activateFunctionWhenElementIsInsideBrowserWindow: addingInViewportClass
             });
         }
